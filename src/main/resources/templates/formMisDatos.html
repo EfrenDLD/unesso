@@ -5,37 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
     <title>Datos personales</title>
 </head>
 <body>
     <nav id="nav"></nav>
     <div class="container mt-3 ">
         <div class="row" >
-            <ol class="colorFondo breadcrumb bread-primary ">
+            <ol class="p-1 colorFondo breadcrumb bread-primary ">
                 <a href="menuAlumno.html" style="text-decoration: none;">
-                    <button class="btn camino" id="botonInicio" >Inicios</button>
+                    <button class="btn camino" >Inicio</button>
                 </a>
                 <a href="menuSolicitarBeca.html" style="text-decoration: none;">
-                    <button class="btn camino" id="botonInicio" >Menu</button>
+                    <button class="btn camino">Menu</button> 
                 </a>
-                <a href="#" style="text-decoration: none;">
-                    <button class="btn btn-primary camino localizacion" >Datos personales</button>  
-                </a> 
+                <a href="miTutor.html" style="text-decoration: none;">
+                    <button class="btn btn-primary camino" style="background-color: #4F46E5; ">Mis datos</button>
+                </a>   
             </ol>
         </div>
     </div>
 <section>
-
-    <h1 class="titulo ps-5 mb-2 mt-2" style="font: bold; font-weight: 660;">MIS DATOS</h1>
-    <div class="row ps-5 pe-5">
-        <div class="col-4 rounded colorFondo m-2 p-4">
+    <h1 class="titulo ps-4 mb-2 mt-2 fw-bold fs-1">MIS DATOS</h1>
+    <div class="container-auto row">
+        <!--Informacion general-->
+        <div class="col-10 col-xs-2 col-sm-12 col-md-11 col-xl-4  rounded colorFondo p-4 m-2 ms-4 me-4">
             <h3 style="color: #6366F1;">Información general</h3>
-                <div class="col-md-12 pt-2">
+                <div class="col-12">
                         <p class="textoInputs">Nombre Completo</p>
                     <input type="text" class="form-control estiloInputs estiloInputs rounded" style="width: 100%;" id="inputNombre" placeholder="Ingrese el nombre completo del alumno">
                 </div>
-                    <div class="col-md-12 pt-3">
+                    <div class="col-12 pt-3">
                         <p class="textoInputs">Carrera</p>
                     <select class="form-select estiloInputs" style="width: 100%;" aria-label="Default select example" >
                         <option selected class="subtitulo">Elige una opción</option>
@@ -61,7 +62,7 @@
                         <option value="3" class="subtitulo">Décimo</option>
                     </select>
                 </div>
-                <div class="col-md-12 pt-3">
+                <div class="col-12 pt-3">
                         <p class="textoInputs">Estado Civil</p>
                     <div style="display: flex; justify-content: space-between;">
                         <div style="width: 48%;">
@@ -78,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 pt-3">
+                <div class="col-12 pt-3">
                         <p class="textoInputs">¿Tienes los recursos económicos necesarios para tus actividades académicas?</p>
                     <div style="display: flex; justify-content: space-between;">
                         <div style="width: 48%;">
@@ -95,10 +96,32 @@
                         </div>
                     </div>
                 </div>
-            </form>
+                <div class="row-auto">
+                    <div class="col-12 mt-3">
+                        <p class="textoInputs">¿Solicitas beca alimentaria?</p>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="width: 100%;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        <p class="subtitulo">Si</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div style="width: 100%;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <p class="subtitulo">No</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-    
-        <div class="col rounded colorFondo m-2 p-4">
+        <!--Domicilio-->
+        <div class="col-10 col-xs-2 col-sm-1 col-md-11 col-xl-7 rounded colorFondo m-2 p-4 ms-4">
         <h3 style="color: #6366F1; padding-bottom: 1%;">Domicilio</h3>
         <div class="col-md-12">
                 <p class="textoInputs">Marque la opción que mejor describa tu situación de vivienda:</p>
@@ -125,8 +148,19 @@
                     </div>
                 </div>
         </div> 
-        <div class="col-md-12" style="padding-top: 2%;">
-                <p class="textoInputs">Marque la opción que mejor describa tu situación de vivienda:</p>
+        <div class="col-md-12 col-xs-1  d-flex" style="padding-top: 2%;">
+            <div class=" col-4 p-2">
+                <p>¿Con cuantas personas comparte el costo de la renta?</p>
+            <input type="text" class="form-control estiloInputs" class="estiloInputs rounded" style="width: 100%;" id="inputComparteRenta">
+            </div>
+            <div class=" col-4 p-2">
+                <p>¿Cuanto paga usted de renta mensualmente?</p>
+            <input type="text" class="form-control estiloInputs" class="estiloInputs rounded" style="width: 100%;" id="pagoMensual">
+            </div>
+            <div class=" col-4 p-2">
+                <p>Nombre de la casa de huéspedes o propietario</p>
+                <input type="text" class="form-control estiloInputs" style="width: 100%;" id="inputNombre" placeholder="">
+            </div>
         </div>
         <div class="col-md-12">
                 <div style="display: flex; justify-content: space-between;">
@@ -210,7 +244,7 @@
                     </div>
                     <div style="width: 48%; padding-top: 2%;">
                         <div class="form-check">
-                            <p class="textoInputs">Código Postal<p/>
+                            <p class="textoInputs">Código Postal</p>
                             <select class="form-select estiloInputs" style="width: 100%;" aria-label="Default select example">
                                 <option value="1" class="subtitulo">78546</option>
                                 <option value="2" class="subtitulo">45523</option>
@@ -221,109 +255,12 @@
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: space-between; padding-top: 1%;">
-                    <div style="width: 70%;">
-                        <p class="textoInputs">Nombre de la casa de huéspedes o propietario</p>
-                        <input type="text" class="form-control estiloInputs" style="width: 100%;" id="inputNombre" placeholder="">
-                    </div>
-                </div>
-        </div> 
+            </div> 
         </div>
     </div>
-</section>
-
-<section>
-    <div class="row ms-5 me-5 colorFondo rounded p-3 mt-2 mb-2">
-        <h3 style="color: #6366F1;">Gastos e ingresos</h3>
-        <div class="row">
-            <div class="col mt-3 me-5" style="margin-right: 200%; padding-right: -50%;">
-                <p class="textoInputs">¿A cuánto hacienden tus gastos mensuales de manutención?</p>
-                <p class="subtitulo">Lo que pagas de alimentación, transporte, vivienda, servicios médicos, libros y materiales escolares, entretenimiento, etc. (Por favor no incluyas los gastos en colegiatura e inscripciones de la universidad)</p>
-                <input type="text" class="form-control estiloInputs" style="width: 100%;"  id="inputNombre" placeholder="">
-            </div>
-            <div class="col mt-3">
-                <p class="textoInputs">¿Dependes económicamente?</p>
-                <div style="display: flex; justify-content: space-between;">
-                    <div style="width: 50%;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault88" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                <p class="subtitulo">Si</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div style="width: 50%;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault88" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                <p class="subtitulo">No</p>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="line mx-auto mt-5" style="width: 80%;"></div>
-        <div class="row">
-            <div class="col mt-3">
-                <p class="textoInputs">Nombre de la persona de la cuál dependes económicamente:</p>
-                <input type="text" class="form-control estiloInputs" style="width: 47%;"  id="inputNombre" placeholder="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col mt-3">
-                <p class="textoInputs">El trabajo de quien dependes es:</p>
-                <div style="display: flex; justify-content: space-between;">
-                    <div style="width: 48%;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault1"><p class="subtitulo">Temporal</p></label>
-                        </div>
-                    </div>
-                    <div style="width: 48%;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2"><p class="subtitulo">Permanente</p></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mt-3">
-                <p class="textoInputs">Indica su ocupación:</p>
-                <input type="text" class="form-control estiloInputs" style="width: 47%;"  id="inputNombre" placeholder="">
-            </div>
-        </div>
-        <div class="line mx-auto mt-5" style="width: 80%;"></div>
-        <div class="row">
-            <div class="col mt-3">
-                <p class="textoInputs">¿Solicitas beca alimentaria?</p>
-                <div style="display: flex; justify-content: space-between;">
-                    <div style="width: 48%;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                <p class="subtitulo">Si</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div style="width: 80%;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                <p class="subtitulo">No</p>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-
-
-
-<section>
-    <div class="row ps-5 pe-5">
-        <div class="col-6 rounded colorFondo m-2 p-4">
+<!-- TRANSPORTE -->
+<div class="container-auto row">
+    <div class="col-10 col-xs-2 col-sm-12 col-md-11 col-xl-6 rounded colorFondo p-4 ms-4 me-4 me-4">
             <h3 style="color: #6366F1;">Transporte</h3>
             <div class="col-md-12 pt-3">
                 <p class="textoInputs">¿Llevas automóvil o motocicleta cotidianamente a la universidad?</p>
@@ -351,16 +288,16 @@
                 </div>
                 <div class="col-md-12 mt-3">
                     <p class="textoInputs">¿Qué otros medios utilizas para trasladarte a la universidad?</p>
-                    <div class="col-md-12">
+                    <div class="col-3 col-md-12 col-xs-4 col-sm-6 col-md-8 col-lg-6">
                         <div style="display: flex; justify-content: space-between;">
-                            <div style="width: 48%;">
-                                <div class="form-check" style="margin-bottom: 30px;">
+                            <div style="width: 120%;">
+                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         <p class="subtitulo">Microbus</p>
                                     </label>
                                 </div>
-                                <div class="form-check" style="margin-bottom: 30px;">
+                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                                     <label class="form-check-label" for="flexCheckChecked">
                                         <p class="subtitulo">Automóvil de amigos</p>
@@ -372,15 +309,23 @@
                                         <p class="subtitulo">Bicicleta</p>
                                     </label>
                                 </div>
-                            </div>                            
-                            <div style="width: 48%;">
-                                <div class="form-check" style="margin-bottom: 30px;">
+                            </div>           
+                            <div style="width: 100%;">
+                                <div class="form-check" style="margin-bottom: 40px;">
+                                </div>
+                                <div class="form-check" style="margin-bottom: 40px">
+                                </div>
+                                <div class="form-check">
+                                </div>
+                            </div>                    
+                            <div style="width: 120%;">
+                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         <p class="subtitulo">Mototaxi</p>
                                     </label>
                                   </div>
-                                  <div class="form-check" style="margin-bottom: 30px;">
+                                  <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                                     <label class="form-check-label" for="flexCheckChecked">
                                         <p class="subtitulo">Caminando</p>
@@ -393,8 +338,16 @@
                                     </label>
                                   </div>
                             </div>
+                            <div style="width: 100%;">
+                                <div class="form-check">
+                                </div>
+                                <div class="form-check">
+                                </div>
+                                <div class="form-check">
+                                </div>
+                            </div>   
                             <div style="width: 48%;">
-                                <div class="form-check" style="margin-bottom: 30px;">
+                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         <p class="subtitulo">Colectivo</p>
@@ -409,10 +362,10 @@
                             </div>
                         </div>
                 </div> 
-                </div>
-        </div>
-
-        <div class="col rounded colorFondo m-2 p-4">
+            </div>
+    </div>
+<!-- INFORMACIÓN COMPLEMENTARIA-->
+    <div class="col-10 col-xs-4 col-sm-1 col-md-11 col-xl-5 rounded colorFondo m-2 p-4 ms-4">
             <h3 style="color: #6366F1; padding-bottom: 2%;">Información complementaria</h3>
             <div class="col-md-12" style="color: #6366F1; ">
                     <p class="textoInputs">¿Eres hijo o nieto de comunero de Ixtlán de Juárez?</p>
@@ -489,9 +442,8 @@
                     <input type="text" class="form-control estiloInputs" style="width: 100%;"  id="inputNombre" placeholder="">
                 </div>
             </div>
-            </div> 
-        </div>
-    </div>
+    </div> 
+</div>
 </section>
 
 <footer id="footer"></footer>
